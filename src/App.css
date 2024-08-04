@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
+body {
+  background-color: #e8f0a0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-form {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-form h2 {
+  margin-bottom: 2rem;
+  color: #343a40;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-label{
+  color:#04376d
+}
+
+.position-relative {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: black; 
+  size: 1rem;
+}
+
+
+.form-control {
+  font-size: 14px;
+  padding: 10px;
+  color: black;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+.form-label {
+  color: #495057;
+}
+
+
+.about-container {
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1,
+.about-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.about-container p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about-container ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-container ul li {
+  background: url('https://img.icons8.com/ios-filled/50/000000/checkmark.png') no-repeat left center;
+  background-size: 20px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.about-container a:hover {
+  text-decoration: underline;
+}
+
+.note-card {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: relative;
+}
+
+.tag {
+  background-color: rgb(243, 112, 112);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.note-actions {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.note-actions i {
+  cursor: pointer;
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-actions i:hover {
+  color: #007bff;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  flex-grow: 1;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #666;
 }
