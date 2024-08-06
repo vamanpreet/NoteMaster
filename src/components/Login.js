@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import FontAwesome icons
 import '../App.css'; // Ensure this path is correct
+const host = process.env.REACT_APP_URL;
 
 const Login = (props) => {
     const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -11,7 +12,7 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:5000/api/auth/login', {
+        const response = await fetch(`${host}/api/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
