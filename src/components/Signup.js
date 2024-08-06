@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import FontAwesome icons
 import '../App.css'; // Ensure this path is correct
+const host = process.env.REACT_APP_URL;
 
 const Signup = (props) => {
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" });
@@ -21,7 +22,7 @@ const Signup = (props) => {
             return;
         }
 
-        const response = await fetch('http://localhost:5000/api/auth/createUser', {
+        const response = await fetch(`${host}/api/auth/createUser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
