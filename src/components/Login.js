@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import FontAwesome icons
 import '../App.css'; // Ensure this path is correct
-const host = process.env.REACT_APP_URL;
+const host = 'https://notemaster-backend-o15d.onrender.com';
 
 const Login = (props) => {
     const [credentials, setCredentials] = useState({ email: "", password: "" });
