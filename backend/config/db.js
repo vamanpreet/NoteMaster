@@ -1,10 +1,23 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://vamanpreet2110:vamanpreet60@cluster0.652l5.mongodb.net/NoteMaster?';
+require('dotenv').config(); // Ensure environment variables are loaded
+
+const mongoURI = process.env.mongoURI;
 
 const connectToMongo = () => {
-    mongoose.connect(mongoURI)
+    if (!mongoURI) {
+        console.error('MongoDB URI is not defined');
+        process.exit(1);
+    }
+
+    mongoose.connect(mongoURI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
     .then(() => console.log('Connected Successfully To Database'))
-    .catch(error => console.log('Failed to connect', error))
+    .catch(error => {
+        console.error('Failed to connect', error);
+        process.exit(1);
+    });
 }
 
 module.exports = connectToMongo;
